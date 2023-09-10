@@ -1,0 +1,98 @@
+nav.navbar{
+    z-index: 100;
+    overflow: hidden;
+    padding: 16px 0;
+    .navbar-content{
+        display: flex;
+        align-items: center;
+        position: relative;
+        & :nth-child(2){
+            gap: 0 40px;
+            @include media-breakpoint-down(xl){
+                gap: 0 32px;
+            }
+        }
+        .navbar-nav{
+            display: flex;
+            align-items: center;
+            &:last-child{
+                gap: 0 24px;
+                @include media-breakpoint-down(xl){
+                    gap: 0 20px;
+                }
+            }
+            .nav-follow{
+                button{
+                    display: flex;
+                    align-items: center;
+                }
+                span{
+                    margin-right: 4px;
+                }
+            }
+            .nav-link{
+                padding: 0;
+            }
+        }
+    }
+}
+.navbar-brand{
+  font-size: 32px;
+  line-height: 1.5;
+  font-family: 'Shrikhand', cursive;
+  @include media-breakpoint-down(md){
+      font-size: 24px;
+  }
+}
+.icon-menu{
+  font-size: 44px;
+}
+.bg-navbar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-image: linear-gradient(180deg, $linear-light, $linear-dark);
+  @include size(100%, 960px);
+}
+.offcanvas{
+  .bg-offcanvas{
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-size: cover;
+      background-image: linear-gradient(180deg, $linear-light, $linear-dark);
+      @include size(100%, 100%);
+  }
+  .offcanvas-body{
+      padding: 0 24px;
+      .navbar-nav{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px 0;
+          .nav-item{
+              a{
+                  padding: 8px 0;
+                  @include media-breakpoint-up(md){
+                      padding: 16px 0;
+                  }
+              }
+              &:last-child{
+                  padding: 0;
+              }
+          }
+          .nav-follow{
+              button{
+                  display: flex;
+                  align-items: center;
+                  span{
+                      margin-right: 4px;
+                  }
+              }
+          }
+      }
+  }
+}
+

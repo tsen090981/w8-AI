@@ -1,0 +1,220 @@
+.container-fluid{
+    padding: 0 80px;
+    @include media-breakpoint-down(xxl){
+        padding: 0 52px;
+    }
+    @include media-breakpoint-down(xl){
+        padding: 0 24px;
+    }
+    @include media-breakpoint-down(lg){
+        padding: 0 12px;
+    }
+}
+//spacing
+.mt-n-index{
+    margin-top: -104px;
+}
+.top-n80{
+    top: -80px;
+}
+.top-n238{
+    top: -238px;
+}
+.letter-spacing-xs{
+    letter-spacing: 1.6px;
+    @include media-breakpoint-down(xl){
+        letter-spacing: 1.4px;
+    }
+}
+.letter-spacing-s{
+    letter-spacing: 16px;
+    @include media-breakpoint-down(xl){
+        letter-spacing: 8px;
+    }
+}
+.letter-spacing-ssm{
+    letter-spacing: 20px;
+    @include media-breakpoint-down(xxl){
+        letter-spacing: 17px;
+    }
+    @include media-breakpoint-down(xl){
+        letter-spacing: 16px;
+    }
+}
+.letter-spacing-sm{
+    letter-spacing: 32px;
+    @include media-breakpoint-down(xl){
+        letter-spacing: 24px;
+    }
+}
+.letter-spacing-m{
+    letter-spacing: 48px;
+    @include media-breakpoint-down(lg){
+        letter-spacing: 24px;
+    }
+}
+.letter-spacing-l{
+    letter-spacing: 80px;
+    @include media-breakpoint-down(xxl){
+        letter-spacing: 68px;
+    }
+    @include media-breakpoint-down(xl){
+        letter-spacing: 56px;
+    }
+    @include media-breakpoint-down(lg){
+        letter-spacing: 26px;
+    }
+}
+.text-justify{
+    text-align: justify;
+}
+.center-justified{
+    text-align: justify;
+    text-align-last: center;
+}
+.center-justified-arrange{
+    text-align: justify;
+    text-align-last: justify;
+}
+
+
+//opacity
+.opacity-0{
+    opacity: 0;
+}
+
+
+//bg
+.bg{
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.bg-size-cover{
+    background-size: cover;
+}
+.bg-deco{
+    &::before{
+        content: "ALPHABOX+";
+        font-size: 400px;
+        font-family: 'Shrikhand', cursive;
+        @include row-center;
+        bottom: -240px;
+        color: rgba($color: $white, $alpha: 0.04);
+        @include media-breakpoint-down(lg){
+            font-size: 128px;
+            bottom: -70px;
+        }
+        @include media-breakpoint-only(md){
+            font-size: 264px;
+            bottom: -124px;
+        }
+    }
+}
+//bg-img
+.bg-index-1{
+    position: absolute;
+    left: 0;top: 0;
+    @include size(100vw, calc(100% - 104px));
+    background-image: linear-gradient(180deg, $linear-light, $linear-dark);
+    @include media-breakpoint-down(xxl){
+        img{
+            opacity: 0;
+        }
+    }
+}
+.bg-index-2{
+    background-size: cover;
+    background-image: url(/assets/images/home-background-2.jpg);
+    @include size(100%, 100%);
+}
+.bg-about-banner{
+    background-image: url(/assets/images/about_us.png);
+    @include size(100%, 280px);
+    @include media-breakpoint-down(lg){
+        background-image: url(/assets/images/mobile/about_us_mobile.png);
+    }
+}
+.bg-linear{
+    background-image: linear-gradient(90deg, $linear-light, $linear-dark);
+}
+.bg-radial-dark{
+    background-image: radial-gradient($bg-linear-light, $bg-linear-dark);
+}
+.bg-radial-light{
+    background-image: radial-gradient($linear-dark, $linear-light);
+}
+
+
+//size
+.logo-size{
+    @include size(196px, 196px);
+}
+.logo-more-size{
+    @include size(132px, 132px);
+}
+.linear-size{
+    @include size(100%, 40px);
+}
+.card-size{
+    @include size(100%, auto);
+}
+.dot-size-s{
+    @include size(8px, 8px);
+}
+.dot-size-m{
+    @include size(16px, 16px);
+}
+.dot-size-long{
+    @include size(124px, 8px)
+}
+
+//border
+.border-radius-4{
+    border-radius: 4px;
+}
+
+//z-index
+.z-index-1{
+    z-index: 1;
+}
+
+//transform rotate
+.t-rotate{
+    animation: rotate 12s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//font-weight
+.fw-black{
+    font-weight: 900;
+}
+.fw-medium{
+    font-weight: 500;
+}
+.fw-demi-light{
+    font-weight: 300;
+}
+//link
+.link{
+    vertical-align: baseline;
+    color: $black;
+    &::after{
+        content: "";
+        @include size(115%, 12px);
+        @include row-center;
+        bottom: -1px;
+        background-color: $light;
+        z-index: -1;
+    }
+}

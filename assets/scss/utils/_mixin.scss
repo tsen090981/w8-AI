@@ -1,0 +1,14 @@
+@mixin size($width ,$height){
+    width: $width;
+    height: $height;
+}
+@mixin row-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin align-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

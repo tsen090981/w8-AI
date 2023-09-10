@@ -1,0 +1,77 @@
+
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(
+  (
+    // scss-docs-end utils-opacity
+    // scss-docs-start utils-overflow
+    "overflow": (
+      property: overflow,
+      values: auto hidden visible scroll,
+      responsive: true
+    ),
+    "overflow-x": (
+      property: overflow-x,
+      values: auto hidden visible scroll,
+      responsive: true
+    ),
+    "overflow-y": (
+      property: overflow-y,
+      values: auto hidden visible scroll,
+      responsive: true
+    ),
+    // scss-docs-end utils-spacing
+    // Text
+    // scss-docs-start utils-text
+    "font-size": (
+      rfs: false,
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+      responsive: true
+    ),
+    "border-width": (
+      property: border-width,
+      class: border,
+      values: $border-widths,
+      responsive: true
+    ),
+    "border-top": (
+      property: border-top,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      ),
+      responsive: true
+    ),
+    "border-end": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      ),
+      responsive: true
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      ),
+      responsive: true
+    ),
+    "border-start": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      ),
+      responsive: true
+    ),
+  ),
+  $utilities
+);

@@ -1,0 +1,199 @@
+
+.card__container{
+    &::after{
+        content: "SCROLL";
+        position: absolute;
+        right: 340px;
+        bottom: -10px;
+        font-weight: bold;
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+        @include media-breakpoint-only(md){
+            right: 170px;
+            bottom: -10px;
+        }
+    }
+}
+.scroller{
+    &::-webkit-scrollbar{
+        height: 4px;
+    }
+    &::-webkit-scrollbar-track-piece{
+        background-color: rgba($color: $white, $alpha: .2);
+        border-radius: 2px;
+        margin-left: 10px;
+        margin-right: 440px;
+        @include media-breakpoint-only(md){
+            margin-right: 260px;
+        }
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $white;
+        border-radius: 2px;
+    }
+}
+.card__body{
+    padding: 40px;
+    font-weight: bold;
+    margin-bottom: 44px;
+    @include media-breakpoint-down(md){
+        padding: 16px;
+        margin-bottom: 30px;
+    }
+    .card__name{
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+        margin-bottom: 32px;
+    }
+    .card__content{
+        height: 100px;
+        margin-bottom: 160px;
+        @include media-breakpoint-down(lg){
+            margin-bottom: 128px;
+        }
+    }
+    .card__robot{
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+    }
+}
+.card__dark{
+    background-color: $secondary;
+}
+.card__light{
+    background-color: $white;
+}
+
+
+.card__person__item{
+    a{
+        color: $white;
+        padding: 24px, 0;
+    }
+    border-right: 1px solid $white;
+    &:last-child{
+        border-right: none;
+    }
+    @include media-breakpoint-down(md){
+        border-right: 1px solid rgba($color: $white, $alpha: .5);
+        border-bottom: 1px solid rgba($color: $white, $alpha: .5);
+        &:nth-child(2){
+            border-right: none;
+        }
+        &:nth-child(3){
+            border-bottom: none
+        }
+        &:nth-child(4){
+            border-bottom: none
+        }
+    }
+}
+.card__person{
+    @include size(100%, auto);
+    background-color: $black;
+    button{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+    .black-cover{
+        @include size(100%, 100%);
+        background-color: rgba($color: $black, $alpha: 1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: .3s;
+        @include media-breakpoint-down(lg){
+            background-color: rgba($color: $black, $alpha: .8);
+        }
+    }
+    .card__person__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0 56px 0;
+        @include media-breakpoint-down(lg){
+            padding: 24px 0;
+        }
+    }
+    .card__person__num{
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-size: 400px;
+        margin-bottom: 20px;
+        @include media-breakpoint-down(lg){
+            font-size: 128px;
+            margin-bottom: 16px;
+        }
+    }
+    .card__person__name{
+        font-family: 'Shrikhand', cursive;
+        font-size: 32px;
+        margin-bottom: 80px;
+        @include media-breakpoint-down(lg){
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+    }
+}
+.card__person__Diane{
+    background-image: url(/assets/images/diane_vertical.png);
+    background-size: cover;
+    &:hover{
+        .black-cover{
+            background-color: rgba($color: $black, $alpha: 0.8);
+        }
+    }
+}
+.card__person__Felix{
+    background-image: url(/assets/images/felix_vertical.png);
+    background-size: cover;
+    &:hover{
+        .black-cover{
+            background-color: rgba($color: $black, $alpha: 0.8);
+        }
+    }
+}
+.card__person__Karina{
+    background-image: url(/assets/images/karina_verticalgle.png);
+    background-size: cover;
+    &:hover{
+        .black-cover{
+            background-color: rgba($color: $black, $alpha: 0.8);
+        }
+    }
+}
+.card__person__Vito{
+    background-image: url(/assets/images/vito_vertical.png);
+    background-size: cover;
+    &:hover{
+        .black-cover{
+            background-color: rgba($color: $black, $alpha: 0.8);
+        }
+    }
+}
+.card__person__bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg){
+        flex-direction: column;
+    }
+    .card__person__txt{
+        white-space: nowrap;
+        @include media-breakpoint-down(lg){
+            white-space: normal;
+        }
+        margin-right: 16px;
+        h5{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
+}

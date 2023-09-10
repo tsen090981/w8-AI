@@ -1,0 +1,77 @@
+.carousel{
+    padding: 32px 0;
+    .button-group{
+        z-index: 10000;
+    }
+    button{
+        background-color: transparent;
+        transition: .3s;
+    }
+    .prev-icon{
+        background-image: url(/assets/images/line_arrow_notch-left.png);
+        background-size: cover;
+        @include size(110px, 30px);
+        &:hover{
+            background-image: url(/assets/images/line_arrow_notch-left-hover.png);
+        }
+        @include media-breakpoint-down(xxxl){
+            @include size(90px, 20px);
+        }
+    }
+    .next-icon{
+        background-image: url(/assets/images/line_arrow_notch-right.png);
+        background-size: cover;
+        @include size(110px, 30px);
+        &:hover{
+            background-image: url(/assets/images/line_arrow_notch-right-hover.png);
+        }
+        @include media-breakpoint-down(xxxl){
+            @include size(90px, 20px);
+        }
+    }
+    .carousel-item{
+        img{
+            @include size(100%, auto)
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            color: $white;
+            text-align: right;
+            @include align-center;
+            right: 40px;
+            z-index: 1;
+            h5{
+                font-family: 'Shrikhand', cursive;
+                font-size: 96px;
+            }
+            h3{
+                font-weight: bold;
+                font-size: 32px;
+                letter-spacing: 32px;
+                margin-bottom: 16px;
+            }
+
+            @include media-breakpoint-down(lg){
+                align-items: start;
+                text-align: left;
+                right: auto;
+                left: 16px;
+                top: auto;
+                transform: none;
+                bottom: 16px;
+                h5{
+                    font-size: 64px;
+                }
+                h3{
+                    font-size: 24px;
+                    letter-spacing: 24px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+
+
