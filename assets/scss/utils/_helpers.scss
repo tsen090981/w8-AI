@@ -114,7 +114,7 @@
 .bg-index-1{
     position: absolute;
     left: 0;top: 0;
-    @include size(100vw, calc(100% - 104px));
+    @include size(100%, calc(100% - 104px));
     background-image: linear-gradient(180deg, $linear-light, $linear-dark);
     @include media-breakpoint-down(xxl){
         img{
